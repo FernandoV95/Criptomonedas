@@ -46,3 +46,7 @@ form [type="submit"]{
 .fila{
   line-height: .8;
 }
+
+.caja{
+  grid-template-columns: 1fr 3fr;
+}

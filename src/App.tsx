@@ -1,9 +1,11 @@
+import CryptoPRiceDisplay from "./components/CryptoPRiceDisplay"
 import Formulario from "./components/Formulario"
 import { useCryptoStore } from "./Store"
 import { useEffect } from "react"
 
 function App() {
-  const fetch = useCryptoStore( (s) => s.fetchCrypto)
+  const fetch = useCryptoStore( (set) => set.fetchCrypto)
+  
   useEffect( ()=>{
     fetch()
   },[])
@@ -15,6 +17,7 @@ function App() {
 
         <div className=" mt-20 px-24 py-8 bg-white border rounded-2xl contenedor">
           <Formulario/>
+          <CryptoPRiceDisplay/>
         </div>
         
       </div>
